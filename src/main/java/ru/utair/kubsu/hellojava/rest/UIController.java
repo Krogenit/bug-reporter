@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+import ru.utair.kubsu.hellojava.HasLogger;
 import ru.utair.kubsu.hellojava.dao.JokeDao;
 import ru.utair.kubsu.hellojava.model.Joke;
 
@@ -18,7 +19,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping(path = "/rest", produces = "application/json")
-public class UIController {
+public class UIController implements HasLogger {
 
     public UIController() {
 
@@ -34,7 +35,7 @@ public class UIController {
     private Cache<ObjectId, Joke> cache;
 
     @GetMapping(path = "joke")
-    public ResponseEntity<String> getRandomJoke() {
+    public ResponseEntity<Joke> getRandomJoke() {
 
         ArrayList<HashMap<String, String>> result = new ArrayList<HashMap<String, String>>();
         String url = "http://umorili.herokuapp.com/api/random?num=100";
@@ -43,7 +44,7 @@ public class UIController {
             result = rest.getForObject(url, ArrayList.class);
         }catch (Exception e) {
             e.printStackTrace();
-            return new ResponseEntity<String>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<Joke>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
         Random rand = new Random();
@@ -54,7 +55,7 @@ public class UIController {
         String desc = result.get(randomIndex).get("desc");
         String elementPureHtml = result.get(randomIndex).get("elementPureHtml");
 
-        elementPureHtml = elementPureHtml.replaceAll("<br />", "")
+        /*elementPureHtml = elementPureHtml.replaceAll("<br />", "")
                 .replaceAll("&lt;","")
                 .replaceAll("&gt;","")
                 .replaceAll("<p>","")
@@ -65,7 +66,7 @@ public class UIController {
                 .replaceAll("&quot","\"")
                 .replaceAll("&laquo;","<<")
                 .replaceAll("&raquo;",">>")
-                .replaceAll("&nbsp;","\n");
+                .replaceAll("&nbsp;","\n");*/
 
         Joke joke = new Joke(site, desc, elementPureHtml);
         ObjectId id = new ObjectId();
@@ -73,7 +74,7 @@ public class UIController {
 
         cache.put(id, joke);
 
-        return new ResponseEntity<String>(joke.getId() +""+joke.getSite() + " " + name + " "+ joke.getCategory() + "\n" + joke.getJokeText(), HttpStatus.OK);
+        return new ResponseEntity<Joke>(joke, HttpStatus.OK);
     }
 
     @PostMapping(path = "add")
@@ -81,6 +82,12 @@ public class UIController {
         ObjectId objId = new ObjectId(id);
         Joke joke = cache.getIfPresent(objId);
         jokeDao.addJoke(joke);
+    }
+
+    @GetMapping(path = "getall")
+    public List<Joke> getAllJokes() {
+        getLogger().info("Start getAllJokes");
+        return jokeDao.getAllJokes();
     }
 
     @GetMapping(path = "hello")

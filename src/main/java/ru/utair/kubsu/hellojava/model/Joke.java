@@ -11,7 +11,7 @@ public class Joke {
 
     @Id
     @JsonSerialize(using = ToStringSerializer.class)
-    ObjectId id;
+    private ObjectId id;
     private String site;
     private String category;
     private String jokeText;

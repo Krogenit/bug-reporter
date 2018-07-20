@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Random Joke</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
 <body>
@@ -13,10 +14,10 @@
     </h1>
     <div class="joke" align="center">
         <div class="joke_border" align="center">
-        <p class="joke_text">Текст шутки</p>
+        <p id="out" class="joke_text">Текст шутки</p>
         </div>
-        <button class="button_like" type="button">Нравится</button>
-        <button class="button_dis" type="button">Не нравится</button>
+        <button id="like_button" class="button_like" type="button">Нравится</button>
+        <button id="dislike_button" class="button_dis" type="button">Не нравится</button>
     </div>
     <div class="view_all_div" align="center">
     <a class="view_all" href="second.html">Смотреть все</a>
