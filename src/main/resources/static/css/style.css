@@ -1,0 +1,105 @@
+body {
+    background-color: #333333;
+}
+
+main {
+    max-width: 1000px;
+    min-width: 1000px;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+
+h1 {
+    padding: 80px 0px 30px 0px;
+
+    font-size: 24pt;
+
+    color: #999999;
+    font-family: 'Lobster', cursive;
+}
+
+.joke_text {
+    font-size: 20pt;
+    font-family: 'Lobster', cursive;
+    color: #EEEEFF;
+}
+
+.joke {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 25px;
+    background-color: #444444;
+    border-radius: 8px;
+}
+
+.joke_border {
+    padding: 25px;
+    border-color: rgb(10, 10, 10);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+.joke_item {
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 25px;
+    background-color: #444444;
+    border-radius: 8px;
+}
+
+.joke_category{
+    color: whitesmoke;
+    padding-left: 10px;
+    font-family: 'Play', sans-serif;
+}
+
+.view_all {
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+    font-size: 15pt;
+}
+
+.view_all_div {
+    max-width: 120px;
+    max-height: 20px;
+    margin: 50px auto;
+    padding: 15px;
+    background-color: rgb(96, 96, 96);
+    border-radius: 8px;
+}
+
+.button_dis {
+    max-width: 100px;
+    margin-top: 20px;
+    margin-left: 160px;
+    border-radius: 8px;
+    background-color: rgb(255, 128, 128);
+    border-color: rgb(255, 128, 128);
+    transition: .5s;
+    border-style: solid;
+}
+
+.button_dis:hover{
+    background-color: rgb(255, 50, 50);
+    border-color: rgb(255, 50, 50);
+    transform: scale(1.1);
+}
+
+.button_like {
+    margin-right: 160px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: rgb(128, 255, 128);
+    border-color: rgb(128, 255, 128);
+    transition: .5s;
+    border-style: solid;
+}
+
+.button_like:hover{
+    background-color: rgb(50, 255, 50);
+    border-color: rgb(50, 255, 50);
+    transform: scale(1.1);
+}
