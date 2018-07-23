@@ -1,13 +1,8 @@
-# Тестовый проект Java BackEnd
+# Проект Bug Reporter
 
 - SpringBoot
 - MongoDB
 
-[API для получение цитат](http://umorili.herokuapp.com/api)
-
-[API для телеграм бота](https://github.com/rubenlagus/TelegramBots)
-
+[JIRA API Create issue](https://developer.atlassian.com/cloud/jira/platform/rest/#api-api-2-issue-post)
 
 ---
-
-Что нужно сделать: Сервис для оценки и отбора цитат и шуток. 

@@ -1,4 +1,4 @@
-package ru.utair.kubsu.hellojava;
+package ru.utair.kubsu.bugreporter;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
