@@ -7,6 +7,7 @@
     <!--<script src="wysihtml5-0.3.0/parser_rules/advanced.js"></script>-->
     <!--&lt;!&ndash; Библиотека &ndash;&gt;-->
     <!--<script src="wysihtml5-0.3.0/dist/wysihtml5_0.3.0.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <main>
@@ -49,9 +50,10 @@
             <label for="email-field"> E-mail </label>
             <input type="text" class="email-input" id="email-field"/>
         </div>
-        <div class="date">
+        <div class="datetime">
             <label for="date-field"> Дата </label>
-            <input type="date" class="date-input" id="date-field" min="2000-01-02"/>
+            <!--<input type="date" class="date-input" id="date-field" min="2000-01-02"/>-->
+            <input type="datetime-local" class="date-input" id="date-field" min="2000-01-02"/>
         </div>
         <input type="submit" placeholder="Отправить"/>
 
