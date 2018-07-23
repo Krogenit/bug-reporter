@@ -2,7 +2,8 @@
     box-sizing: border-box;
     margin: 10px;
     padding: 0 auto;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    color: #003494;
 
 }
 
@@ -16,13 +17,21 @@ main
     /*border: 1px solid #bfcbc8;*/
 }
 
+.image{
+    height:70px;
+    width: 70px;
+    margin: 0 auto;
+}
+
 h1{
     margin-top: 50px;
     margin-bottom: 30px;
     font-size: 36px;
-    color:#242d42;
-    font-family: 'Roboto', sans-serif;
+    color:#003494;
+    /*font-family: 'Roboto', sans-serif;*/
     text-align: center;
+    /*display: inline-flex;*/
+    /*justify-content: center;*/
     /*transition: .2s;*/
 }
 
@@ -30,7 +39,7 @@ h1{
 {
     width: 650px;
     margin: 0 auto;
-    background: #e5edf3;
+    background: #e6f0fc;
     border-radius: 4px;
     position: relative;
     display : flex;
@@ -40,7 +49,7 @@ h1{
 }
 
 label{
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     font-size: 19px;
     text-align: right;
     margin: 10px;
@@ -60,7 +69,7 @@ input{
 }
 
 .box-input{
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     height: 30px;
     width: 400px;
     border-radius: 3px;
@@ -70,15 +79,23 @@ input{
 }
 
 .select-input{
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     height: 30px;
     width: 200px;
     border-radius: 3px;
     border: 1px solid #bfcbc8;
+    color: #000066;
 }
 
+.date-input{
+    color: #000066;
+}
+
+.file-input{
+    color: #000066;
+}
 .description-input{
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     height: 200px;
     width: 400px;
     border-radius: 3px;
@@ -97,16 +114,16 @@ textarea{
 
 .button
 {
-    background: #000066;
+    background: #003494;
     color: #FFFFFF;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     max-width: 150px;
     width: 150px;
     max-height: 40px;
     height: 40px;
     font-size: 15px;
     border-radius: 6px;
-    border: 1px solid #242d42;
+    border: 1px solid #003494;
     transition: .2s;
     cursor: pointer;
     margin-right: 20px;
