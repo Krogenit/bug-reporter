@@ -15,29 +15,40 @@
     <form class="form">
         <div class="project">
             <label for="project-field"> Проект </label>
-            <input class="project-input" id="project-field"/>
-            <span class="drop-menu"></span>
+            <select class="project-input" id="project-field">
+                <option>Пример </option>
+            </select>
         </div>
         <div class="theme">
             <label for="theme-field"> Тема </label>
-            <input class="theme-input" id="theme-field"/>
+            <input type="text" class="theme-input" id="theme-field"/>
         </div>
         <div class="description">
             <label for="description-field"> Описание </label>
             <textarea class="description-input" id="description-field"> </textarea>
         </div>
-        <div class="project">
-            <label for="project-field"> Проект </label>
-            <input class="project-input" id="project-field"/>
-            <span class="drop-menu"></span>
+        <div class="priority">
+            <label for="priority-field"> Приоритет </label>
+            <select class="priority-input" id="priority-field">
+                <option>Highest</option>
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+                <option>Lowest</option>
+            </select>
         </div>
-
-
-
-
-
-
-
+        <div class="file">
+            <label for="file-field"> Вложение </label>
+            <input type="file" class="file-input" id="file-field"/>
+        </div>
+        <div class="fio">
+            <label for="fio-field"> ФИО </label>
+            <input type="text" class="fio-input" id="fio-field"/>
+        </div>
+        <div class="email">
+            <label for="email-field"> E-mail </label>
+            <input type="text" class="email-input" id="email-field"/>
+        </div>
 
     </form>
 </main>
