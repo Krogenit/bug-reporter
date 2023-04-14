@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <script src="JS/script.js"></script>
     <script src="JS/jquery-3.3.1.min.js"></script>
-
 </head>
 <body>
 <main>
@@ -62,6 +61,12 @@
         <div class="wrap" id="wrap_button">
         <input type="submit" class="button" placeholder="Отправить"/>
         </div>
+        <div class="datetime">
+            <label for="date-field"> Дата </label>
+            <!--<input type="date" class="date-input" id="date-field" min="2000-01-02"/>-->
+            <input type="datetime-local" class="date-input" id="date-field" min="2000-01-02"/>
+        </div>
+        <input type="submit" placeholder="Отправить"/>
 
     </form>
 </main>
