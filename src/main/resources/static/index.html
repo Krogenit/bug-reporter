@@ -8,29 +8,37 @@
     <!--&lt;!&ndash; Библиотека &ndash;&gt;-->
     <!--<script src="wysihtml5-0.3.0/dist/wysihtml5_0.3.0.min.js"></script>-->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <script src="JS/script.js"></script>
+    <script src="JS/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 <main>
 
-    <h1>Bug reporter</h1>
+
+    <h1> <img class="image" src="img/utair_sign_blue_rgb.png"> Utair bug reporter</h1>
     <form class="form">
-        <div class="project">
+        <div class="wrap">
             <label for="project-field"> Проект </label>
-            <select class="project-input" id="project-field">
-                <option>Пример </option>
+            <select class="select-input" id="project-field">
             </select>
         </div>
-        <div class="theme">
+        <div class="wrap">
             <label for="theme-field"> Тема </label>
-            <input type="text" class="theme-input" id="theme-field"/>
+            <input type="text" class="box-input" id="theme-field"/>
         </div>
-        <div class="description">
+        <div class="wrap">
             <label for="description-field"> Описание </label>
             <textarea class="description-input" id="description-field"> </textarea>
         </div>
-        <div class="priority">
+        <div class="wrap">
+            <label for="date-field"> Дата </label>
+            <!--<input type="date" class="date-input" id="date-field" min="2000-01-02"/>-->
+            <input type="datetime-local" class="date-input" id="date-field" min="2000-01-02"/>
+        </div>
+        <div class="wrap">
             <label for="priority-field"> Приоритет </label>
-            <select class="priority-input" id="priority-field">
+            <select class="select-input" id="priority-field">
                 <option>Highest</option>
                 <option>High</option>
                 <option>Medium</option>
@@ -38,17 +46,20 @@
                 <option>Lowest</option>
             </select>
         </div>
-        <div class="file">
+        <div class="wrap">
             <label for="file-field"> Вложение </label>
             <input type="file" class="file-input" id="file-field"/>
         </div>
-        <div class="fio">
+        <div class="wrap">
             <label for="fio-field"> ФИО </label>
-            <input type="text" class="fio-input" id="fio-field"/>
+            <input type="text" class="box-input" id="fio-field"/>
         </div>
-        <div class="email">
+        <div class="wrap">
             <label for="email-field"> E-mail </label>
-            <input type="text" class="email-input" id="email-field"/>
+            <input type="text" class="box-input" id="email-field"/>
+        </div>
+        <div class="wrap" id="wrap_button">
+        <input type="submit" class="button" placeholder="Отправить"/>
         </div>
         <div class="datetime">
             <label for="date-field"> Дата </label>
